@@ -26,6 +26,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="userInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="0rr-ga-Sdp"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhA-kh-dCT">
                                 <rect key="frame" x="256" y="61" width="103" height="24"/>
@@ -65,7 +68,7 @@
                                     <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TAk-Bk-rXx"/>
                                 </connections>
                             </button>
-                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4SV-O8-Q1h">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4SV-O8-Q1h">
                                 <rect key="frame" x="16" y="61" width="32" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="8kg-rr-3fs"/>
@@ -76,6 +79,9 @@
                                     <segment title="-"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="signSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="EwI-lS-mpc"/>
+                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gbI-pp-Ray">
                                 <rect key="frame" x="43.333333333333343" y="444" width="288.33333333333326" height="28"/>
@@ -145,6 +151,7 @@
                         <outlet property="formulaPicker" destination="dbc-lI-SXC" id="x2D-MV-Vtq"/>
                         <outlet property="fromUnitsLabel" destination="WhA-kh-dCT" id="eED-PV-g9t"/>
                         <outlet property="resultsLabel" destination="4Sb-dr-n6p" id="blc-ch-Hwa"/>
+                        <outlet property="signSegment" destination="4SV-O8-Q1h" id="rUR-FP-Ax7"/>
                         <outlet property="userInput" destination="L1N-ZV-Mwm" id="MIy-Ca-hfF"/>
                     </connections>
                 </viewController>
